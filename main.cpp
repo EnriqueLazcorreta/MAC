@@ -7,30 +7,15 @@
 //
 
 #include <iostream>
-#include <fstream>
-using std::ifstream;
 #include <string>
 using std::string;
-using std::cout;
-using std::endl;
 
-bool m_parlanchin = true;
 
-class acArchivo : public ifstream
 {
-    string m_nombre;
-public:
-    acArchivo(string nombre) : m_nombre(nombre)
+    
+    
     {
-        open(m_nombre);
-        if (!is_open())
-            throw ("No he podido abrir el archivo " + m_nombre);
-        if (m_parlanchin) {
-            cout << "Archivo " << m_nombre << " abierto" << endl;
-        }
     }
-    ~acArchivo() { close(); }
-};
 
 
 
@@ -55,7 +40,5 @@ int main(int argc, const char * argv[])
     }
 
     delete archivo;
-    
-    cout << "Hello, World!\n";
     return 0;
 }
